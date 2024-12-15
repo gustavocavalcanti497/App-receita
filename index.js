@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const bodyParser = require('body-parser');
+
 const cors = require('cors');
 const receitasRoutes = require('./routes/receitasRoutes');
 const { connectDB } = require('./config/db');
@@ -10,7 +10,7 @@ const { connectDB } = require('./config/db');
 const app = express();
 
 // Middlewares
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
 
 // Rota principal para receitas
