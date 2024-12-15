@@ -9,7 +9,7 @@ const traduzirTexto = async (texto,origem,destino) =>{
         null,
         {
             params: {
-                auth_key: '53f4f9c6-6633-40fc-bd0e-b7302b077578:fx',
+                auth_key: process.env.DEEPL_API_KEY,
                 text: texto,
                 source_lang: origem.toUpperCase(),
                 target_lang: destino.toUpperCase()
